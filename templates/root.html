@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <title>Varta Media</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="title" content="Pixel - Free Bootstrap 5 UI Kit">
+        <meta name="author" content="Themesberg">
+        <meta name="description" content="Open source and free Bootstrap 5 UI Kit featuring 80 UI components, 5 example pages, and a Gulp and Sass workflow.">
+        <link rel="canonical" href="https://themesberg.com/product/ui-kit/pixel-free-bootstrap-5-ui-kit">
+
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://demo.themesberg.com/pixel-bootstrap-5-ui-kit">
+        <meta property="og:title" content="Pixel - Free Bootstrap 5 UI Kit">
+        <meta property="og:description" content="Open source and free Bootstrap 5 UI Kit featuring 80 UI components, 5 example pages, and a Gulp and Sass workflow.">
+        <meta property="og:image" content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/pixel-lite/pixel-lite-preview.jpg">
+
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://demo.themesberg.com/pixel-bootstrap-5-ui-kit">
+        <meta property="twitter:title" content="Pixel - Free Bootstrap 5 UI Kit">
+        <meta property="twitter:description" content="Open source and free Bootstrap 5 UI Kit featuring 80 UI components, 5 example pages, and a Gulp and Sass workflow.">
+        <meta property="twitter:image" content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/pixel-lite/pixel-lite-preview.jpg">
+
+        <link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static',filename='/assets/img/logo/V.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static',filename='/assets/img/logo/V.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static',filename='/assets/img/logo/V.png') }}">
+        <link rel="manifest" href="{{ url_for('static',filename='/assets/img/logo/V.png') }}">
+        <link rel="mask-icon" href="{{ url_for('static',filename='/assets/img/logo/V.png') }}" color="#ffffff">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="theme-color" content="#ffffff">
+
+        <link type="text/css" href="{{ url_for('static',filename='/vendor/fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
+
+        <link type="text/css" href="{{ url_for('static',filename='/css/pixel.css') }}" rel="stylesheet">
+    </head>
+
+    <body>
+
+        {% block header %}{% endblock %}
+        {% block body %}{% endblock %}
+        {% block footer %}{% endblock %}
+
+            <!-- Core -->
+        <script src="{{ url_for('static',filename='/vendor/popperjs/core/dist/umd/popper.min.js') }}"></script>
+        <script src="{{ url_for('static',filename='/vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+        <script src="{{ url_for('static',filename='/vendor/headroom.js/dist/headroom.min.js') }}"></script>
+        <!-- Vendor JS -->
+        <script src="{{ url_for('static',filename='/vendor/onscreen/dist/on-screen.umd.min.js') }}"></script>
+        <script src="{{ url_for('static',filename='/vendor/jarallax/dist/jarallax.min.js') }}"></script>
+        <script src="{{ url_for('static',filename='/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js') }}"></script>
+        <script src="{{ url_for('static',filename='/vendor/vivus/dist/vivus.min.js') }}"></script>
+        <script src="{{ url_for('static',filename='/vendor/vanillajs-datepicker/dist/js/datepicker.min.js') }}"></script>
+
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+        <!-- Pixel JS -->
+        <script src="{{ url_for('static',filename='/assets/js/pixel.js') }}"></script>
+
+        <script src="{{ url_for('static',filename='/assets/js/p5.min.js') }}"></script>
+        <script src="{{ url_for('static',filename='/assets/js/vanta.topology.min.js') }}"></script>
+        <script>
+        VANTA.TOPOLOGY({
+          el: "#vantajs",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          color: 0x476891,
+          backgroundColor: 0x242f4d
+        })
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,251 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<section class="section-header bg-secondary text-white" id="vantajs">
+    <div class="container">
+       <div class="row justify-content-between align-items-center">
+          <div class="col-12 col-md-7 col-lg-6 text-center text-md-left">
+                <h1 class="display-2 mb-4">{{news_category}}<br class="d-none d-md-inline">News</h1>
+            </div>
+          <div class="col-12 col-md-5 d-none d-md-block text-center"><img src="../../assets/img/illustrations/about-illustration.svg" alt=""></div>
+       </div>
+    </div>
+    <figure class="position-absolute bottom-0 left-0 w-100 d-none d-md-block mb-n2">
+       <svg class="fill-white" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 43.4" style="enable-background:new 0 0 1920 43.4;" xml:space="preserve">
+          <path d="M0,23.3c0,0,405.1-43.5,697.6,0c316.5,1.5,108.9-2.6,480.4-14.1c0,0,139-12.2,458.7,14.3 c0,0,67.8,19.2,283.3-22.7v35.1H0V23.3z"></path>
+       </svg>
+    </figure>
+</section>
+<div class="section section-md">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
+                <div class="card shadow text-center">
+                    <!-- Header -->
+                    <div class="card-header bg-white p-3">
+                        <span class="d-block">
+                            <span class="display-1 text-dark fw-bold">
+                                <img src="{{news[0]['img']}}" alt="News Image">
+                            </span>
+                        </span>
+                        <br>
+                        <a href="{{'https://{}'.format(news[0]['link'])}}" target="_blank">
+                            <h5 class="text-primary mb-4">{{news[0]['title']}}</h5>
+                        </a>
+                        <p>{{news[0]['date']}}</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled mb-4">
+                            <li class="list-item pb-3">{{news[0]['desc']}}</li>
+                        </ul>
+                        <a href="{{'https://{}'.format(news[0]['link'])}}" target="_blank" class="btn btn-tertiary">Open</a>
+                    </div>
+                    <!-- End Content -->
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
+                <div class="card shadow text-center">
+                    <!-- Header -->
+                    <div class="card-header bg-white p-3">
+                        <span class="d-block">
+                            <span class="display-1 text-dark fw-bold">
+                                <img src="{{news[1]['img']}}" alt="News Image">
+                            </span>
+                        </span>
+                        <br>
+                        <a href="{{'https://{}'.format(news[1]['link'])}}" target="_blank">
+                            <h5 class="text-primary mb-4">{{news[1]['title']}}</h5>
+                        </a>
+                        <p>{{news[1]['date']}}</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled mb-4">
+                            <li class="list-item pb-3">{{news[1]['desc']}}</li>
+                        </ul>
+                        <a href="{{'https://{}'.format(news[1]['link'])}}" target="_blank" class="btn btn-tertiary">Open</a>
+                    </div>
+                    <!-- End Content -->
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
+                <div class="card shadow text-center">
+                    <!-- Header -->
+                    <div class="card-header bg-white p-3">
+                        <span class="d-block">
+                            <span class="display-1 text-dark fw-bold">
+                                <img src="{{news[2]['img']}}" alt="News Image">
+                            </span>
+                        </span>
+                        <br>
+                        <a href="{{'https://{}'.format(news[2]['link'])}}" target="_blank">
+                            <h5 class="text-primary mb-4">{{news[2]['title']}}</h5>
+                        </a>
+                        <p>{{news[2]['date']}}</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled mb-4">
+                            <li class="list-item pb-3">{{news[2]['desc']}}</li>
+                        </ul>
+                        <a href="{{'https://{}'.format(news[2]['link'])}}" target="_blank" class="btn btn-tertiary">Open</a>
+                    </div>
+                    <!-- End Content -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
+                <div class="card shadow text-center">
+                    <!-- Header -->
+                    <div class="card-header bg-white p-3">
+                        <span class="d-block">
+                            <span class="display-1 text-dark fw-bold">
+                                <img src="{{news[3]['img']}}" alt="News Image">
+                            </span>
+                        </span>
+                        <br>
+                        <a href="{{'https://{}'.format(news[3]['link'])}}" target="_blank">
+                            <h5 class="text-primary mb-4">{{news[3]['title']}}</h5>
+                        </a>
+                        <p>{{news[3]['date']}}</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled mb-4">
+                            <li class="list-item pb-3">{{news[3]['desc']}}</li>
+                        </ul>
+                        <a href="{{'https://{}'.format(news[3]['link'])}}" target="_blank" class="btn btn-tertiary">Open</a>
+                    </div>
+                    <!-- End Content -->
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
+                <div class="card shadow text-center">
+                    <!-- Header -->
+                    <div class="card-header bg-white p-3">
+                        <span class="d-block">
+                            <span class="display-1 text-dark fw-bold">
+                                <img src="{{news[4]['img']}}" alt="News Image">
+                            </span>
+                        </span>
+                        <br>
+                        <a href="{{'https://{}'.format(news[4]['link'])}}" target="_blank">
+                            <h5 class="text-primary mb-4">{{news[4]['title']}}</h5>
+                        </a>
+                        <p>{{news[4]['date']}}</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled mb-4">
+                            <li class="list-item pb-3">{{news[4]['desc']}}</li>
+                        </ul>
+                        <a href="{{'https://{}'.format(news[4]['link'])}}" target="_blank" class="btn btn-tertiary">Open</a>
+                    </div>
+                    <!-- End Content -->
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
+                <div class="card shadow text-center">
+                    <!-- Header -->
+                    <div class="card-header bg-white p-3">
+                        <span class="d-block">
+                            <span class="display-1 text-dark fw-bold">
+                                <img src="{{news[5]['img']}}" alt="News Image">
+                            </span>
+                        </span>
+                        <br>
+                        <a href="{{'https://{}'.format(news[5]['link'])}}" target="_blank">
+                            <h5 class="text-primary mb-4">{{news[5]['title']}}</h5>
+                        </a>
+                        <p>{{news[5]['date']}}</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled mb-4">
+                            <li class="list-item pb-3">{{news[5]['desc']}}</li>
+                        </ul>
+                        <a href="{{'https://{}'.format(news[5]['link'])}}" target="_blank" class="btn btn-tertiary">Open</a>
+                    </div>
+                    <!-- End Content -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
+                <div class="card shadow text-center">
+                    <!-- Header -->
+                    <div class="card-header bg-white p-3">
+                        <span class="d-block">
+                            <span class="display-1 text-dark fw-bold">
+                                <img src="{{news[6]['img']}}" alt="News Image">
+                            </span>
+                        </span>
+                        <br>
+                        <a href="{{'https://{}'.format(news[6]['link'])}}" target="_blank">
+                            <h5 class="text-primary mb-4">{{news[6]['title']}}</h5>
+                        </a>
+                        <p>{{news[6]['date']}}</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled mb-4">
+                            <li class="list-item pb-3">{{news[6]['desc']}}</li>
+                        </ul>
+                        <a href="{{'https://{}'.format(news[6]['link'])}}" target="_blank" class="btn btn-tertiary">Open</a>
+                    </div>
+                    <!-- End Content -->
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
+                <div class="card shadow text-center">
+                    <!-- Header -->
+                    <div class="card-header bg-white p-3">
+                        <span class="d-block">
+                            <span class="display-1 text-dark fw-bold">
+                                <img src="{{news[7]['img']}}" alt="News Image">
+                            </span>
+                        </span>
+                        <br>
+                        <a href="{{'https://{}'.format(news[7]['link'])}}" target="_blank">
+                            <h5 class="text-primary mb-4">{{news[7]['title']}}</h5>
+                        </a>
+                        <p>{{news[7]['date']}}</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled mb-4">
+                            <li class="list-item pb-3">{{news[7]['desc']}}</li>
+                        </ul>
+                        <a href="{{'https://{}'.format(news[7]['link'])}}" target="_blank" class="btn btn-tertiary">Open</a>
+                    </div>
+                    <!-- End Content -->
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
+                <div class="card shadow text-center">
+                    <!-- Header -->
+                    <div class="card-header bg-white p-3">
+                        <span class="d-block">
+                            <span class="display-1 text-dark fw-bold">
+                                <img src="{{news[8]['img']}}" alt="News Image">
+                            </span>
+                        </span>
+                        <br>
+                        <a href="{{'https://{}'.format(news[8]['link'])}}" target="_blank">
+                            <h5 class="text-primary mb-4">{{news[8]['title']}}</h5>
+                        </a>
+                        <p>{{news[8]['date']}}</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled mb-4">
+                            <li class="list-item pb-3">{{news[8]['desc']}}</li>
+                        </ul>
+                        <a href="{{'https://{}'.format(news[8]['link'])}}" target="_blank" class="btn btn-tertiary">Open</a>
+                    </div>
+                    <!-- End Content -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
