@@ -17,7 +17,7 @@ joblib==1.0.1
 MarkupSafe==1.1.1
 numpy
 oauthlib==3.1.0
-pandas==1.2.3
+pandas
 psycopg2==2.8.6
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
