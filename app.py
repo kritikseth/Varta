@@ -34,7 +34,7 @@ flow = Flow.from_client_secrets_file(
     redirect_uri='http://127.0.0.1:5000/callback'
 )
 
-ENV = 'dev'
+ENV = 'prod'
 
 if ENV == 'dev':
     app.debug = True
