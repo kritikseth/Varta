@@ -13,13 +13,11 @@ from pip._vendor import cachecontrol
 import google.auth.transport.requests
 
 import varta_tools as v
-
-app = Flask('Varta Media')
-
 from database_tables import *
 
-db.init_app(app)
+ENV = 'dev'
 
+app = Flask('Varta Media')
 app.secret_key = 'VartaMedia'
 
 os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
@@ -34,14 +32,14 @@ flow = Flow.from_client_secrets_file(
     redirect_uri='http://127.0.0.1:5000/callback'
 )
 
-ENV = 'prod'
-
 if ENV == 'dev':
     app.debug = True
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:admin@localhost/varta_media'
-else:
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:kritikseth@localhost:5432/varta_media'
+elif ENV == 'prod':
     app.debug = False
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://vdrnigwaqybubl:8d117f3be50b4129c4b4d4a71f54be7ec71a4001c12d25f265228709722776b2@ec2-52-21-252-142.compute-1.amazonaws.com:5432/d89h8rrdrlbg2s'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:kritikseth@localhost:5432/varta_media'
+
+db.init_app(app)
 
 recommend_news = pandas.read_csv('data/news_learn.csv')
 # svc_c = load(open('data/linearsvc_classification.joblib', 'rb'))
@@ -235,4 +233,4 @@ def classified():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=5000)
