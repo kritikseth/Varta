@@ -3,7 +3,7 @@
 
 Varta is a free and open source news recommendation engine prototype. It derives it meaning from the sanskrit word वार्ता which means news.
 
-Protype Images
+Prototype Images
 
 ![1](static/img/product/1.png)
 ![2](static/img/product/2.png)
